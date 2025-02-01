@@ -6,6 +6,8 @@
 }
 :root {
   --roboto-font: "Roboto", serif;
+  --primary-color: #358939;
+  --button-hover-color: #0e4b22;
 }
 body {
   color: #404040;
@@ -56,7 +58,7 @@ a.logo {
 a.logo img {
   width: 100%;
   height: 100%;
-  border: 2px solid #68aaff;
+  border: 2px solid var(--primary-color);
   border-radius: 500px;
 }
 .hero-emty-aria .nav-middle-text {
@@ -79,7 +81,7 @@ a.logo img {
 }
 
 .nav-button button {
-  background: #68aaff;
+  background: var(--primary-color);
   font-weight: 500;
   padding: 12px 24px;
   font-size: 15px;
@@ -91,7 +93,7 @@ a.logo img {
 }
 
 .nav-button button:hover {
-  background: #3b3b3b;
+  background: var(--button-hover-color);
 }
 .hero-section {
   position: relative;
@@ -99,7 +101,7 @@ a.logo img {
 }
 .hero-bg-overly {
   background-color: transparent;
-  background-image: linear-gradient(122deg, #ffe75f 0%, #05304d 100%);
+  background-image: linear-gradient(122deg, #aedf6a 0%, #000000 100%);
   opacity: 0.86;
   height: 100%;
   width: 100%;
@@ -152,14 +154,22 @@ a.logo img {
 .highlight-button a {
   padding: 5px 30px 5px 30px;
   font-size: 36px;
-  background-image: linear-gradient(180deg, #3688fc 0%, #2a2828 100%);
+  background-image: linear-gradient(
+    180deg,
+    var(--primary-color) 0%,
+    #2a2828 100%
+  );
   border-radius: 20px;
   font-weight: 600;
   color: white;
   transition: all 0.2s linear;
 }
 .highlight-button a:hover {
-  background-image: linear-gradient(180deg, #0c9124 0%, #161616 100%);
+  background-image: linear-gradient(
+    180deg,
+    var(--button-hover-color) 0%,
+    #161616 100%
+  );
 }
 
 .highlight-button {
@@ -168,6 +178,9 @@ a.logo img {
 .highlight-video {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .highlight-video iframe {
   width: 100%;
@@ -248,7 +261,7 @@ span.feature-list-icon {
 }
 .divide-border {
   width: 100%;
-  border: 3px solid #6ec1e4;
+  border: 3px solid var(--primary-color);
   margin: 30px 0;
 }
 .why-block {
@@ -293,7 +306,7 @@ h4.why-last-text {
 }
 
 .features-texts-title {
-  background: #3065b1;
+  background: var(--primary-color);
   font-size: 24px;
 }
 
@@ -320,27 +333,27 @@ section.checkout-section {
 
 .checkout-form {
   width: 100%;
-  border: 3px solid #070101;
+  border: 3px solid var(--primary-color);
   padding: 24px;
 }
 
 .form-top-title {
   text-align: center;
   font-size: 34px;
-  color: #229f4c;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 30px;
 }
 .form-middle-text {
   text-align: center;
   font-size: 18px;
-  color: #229f4c;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 .form-number-text {
   text-align: center;
   font-size: 24px;
-  color: #229f4c;
+  color: var(--primary-color);
   font-weight: 600;
   word-wrap: break-word;
 }
@@ -383,7 +396,7 @@ section.checkout-section {
   min-width: 15px;
   min-height: 15px;
   border-radius: 100px;
-  border: 1px solid gray;
+  border: 1px solid var(--primary-color);
   margin-top: 5px;
 }
 .checkbox {
@@ -393,7 +406,7 @@ section.checkout-section {
   transform: translate(-46%, -46%);
   min-width: 7px;
   min-height: 7px;
-  background: #f16334;
+  background: var(--primary-color);
   border-radius: 100px;
 }
 
@@ -655,12 +668,12 @@ span.tatal-number {
 }
 
 .personal-info a {
-  color: #f16334;
+  color: var(--primary-color);
 }
 
 button.order-button {
   padding: 15px;
-  background: #f16334;
+  background: var(--primary-color);
   border: none;
   outline: none;
   font-size: 16px;
@@ -672,9 +685,10 @@ button.order-button {
   gap: 10px;
   border-radius: 2px;
   font-family: var(--roboto-font);
+  transition: all 0.2s linear;
 }
 button.order-button:hover {
-  background: #792509;
+  background: var(--button-hover-color);
 }
 span.order-place-text {
   display: flex;
@@ -754,7 +768,7 @@ ul.number-list li a {
 
 ul.number-list li a:hover {
   text-decoration: underline;
-  color: #f16334;
+  color: var(--primary-color);
 }
 ul.number-list.Social {
   display: flex;
@@ -776,7 +790,7 @@ ul.number-list.Social li a i {
 }
 
 ul.number-list.Social li a i:hover {
-  background: #f16334;
+  background: var(--primary-color);
   color: white;
 }
 
@@ -811,7 +825,7 @@ ul.number-list.Social li a:hover {
 }
 
 .utility-links-wrap a:hover {
-  color: #f16334;
+  color: var(--primary-color);
 }
 /* responsive css */
 @media (max-width: 992px) {
@@ -875,6 +889,12 @@ ul.number-list.Social li a:hover {
   }
   .product-item {
     flex-direction: column;
+  }
+  .highlight-button a {
+    width: 70%;
+    margin: auto;
+    display: block;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -953,5 +973,11 @@ ul.number-list.Social li a:hover {
   .highlight-lg-text h2 {
     font-size: 28px;
     line-height: 1.5em;
+  }
+  .highlight-button a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 28px;
   }
 }
