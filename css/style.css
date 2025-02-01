@@ -67,6 +67,8 @@ a.logo img {
   font-weight: 600;
   color: #000000;
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
 .nav-middle-text p {
@@ -92,13 +94,8 @@ a.logo img {
   background: #3b3b3b;
 }
 .hero-section {
-  background: url(../img/hero-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   z-index: 1;
-  min-height: 120px;
 }
 .hero-bg-overly {
   background-color: transparent;
@@ -770,6 +767,7 @@ ul.number-list.Social li a i {
   width: 30px;
   height: 30px;
   background: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,7 +816,7 @@ ul.number-list.Social li a:hover {
 /* responsive css */
 @media (max-width: 992px) {
   .hero-section {
-    min-height: 600px;
+    min-height: 100%;
   }
   nav.navbar-aria {
     padding: 10px 0px;
